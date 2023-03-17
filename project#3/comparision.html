@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXTAG</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+        body {
+            
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        .car{
+            padding-top: 300px;
+            
+        }
+        .imagecar{
+            width: 95%;
+        }
+
+        .heading{
+          padding-top: 100px
+        }
+       
+        .flex-container{
+            width: 90%;
+          
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0px auto;
+        }
+
+        .flex-container > div{
+            flex-basis: 40%;
+            min-width: 400px;
+            margin: 0px auto;
+        }
+
+        select{
+            width: 90%;
+            margin: 0px auto;
+            height: 25px;
+            padding-left: 10px;
+            font-size: 16px;
+        }
+        img{
+            width: inherit;
+        }
+
+        .leftfruit,.rightfruit{
+            display: none;
+        }
+        .navbar{
+    background: rgb(72,88,92);
+background: linear-gradient(90deg, rgba(72,88,92,0.5129310344827587) 9%,
+rgba(122,118,175,0.7413793103448276) 30%, rgba(146,144,199,0.8405172413793103) 52%,
+rgba(102, 102, 129, 0.733) 77%);
+width: 100%;
+}
+
+.nl{
+    color: rgb(247, 241, 240) !important;
+    transition:  all 0.3s;
+    position: relative ;
+    
+}
+.nl::before{
+    content: "";
+    display: block;
+    height: 2px;
+    border-radius: 5px;
+    width: 0%;
+    background-color: yellow;
+    position: absolute;
+    bottom: 0;
+   
+}
+
+.nl:hover::before{
+    width: 75%;
+    transition: 0.4s;
+   
+}
+.navbar-brand:hover{
+    color: rgb(234, 238, 27) !important;
+    font-weight: bolder !important;
+}
+    </style>
+
+</head>
+
+<body>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<h3>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark  " >
+<div class="container">
+    <a href="#" class="navbar-brand nl" style="color:aqua ;font-size: 15px; ">NEXTAG</a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarid">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarid" >
+     <ul class="navbar-nav text-center ms-auto">
+        <li class="nav-item">
+        <a href="task.html" class="nav-link text-light nl"  style="font-size: 15px;">Home</a>
+       </li>
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:aqua; font-size: 15px;">
+          Services
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+          <li><a class="dropdown-item nl" href="gucci.html"  style="font-size: 15px;">Gucci</a></li>
+          <li><a class="dropdown-item nl" href="nike.html"  style="font-size: 15px;">Nike</a></li>
+        </ul>
+         </li>
+         <li class="nav-item">
+          <a href="comparison.html" class="nav-link text-light nl" style="font-size: 15px;">Comparison</a>
+         </li>
+       <li class="nav-item">
+        <a href="aboutus.html" class="nav-link text-light nl"  style="font-size: 15px;">About Us</a>
+       </li>
+       <li class="nav-item">
+        <a href="contactus.html" class="nav-link text-light nl"  style="font-size: 15px;">Contact Us</a>
+       </li>
+       <li class="nav-item">
+        <a href="faqs.html" class="nav-link text-light nl"  style="font-size: 15px;">FAQs</a>
+       </li>
+</ul>
+</div>
+</div>
+</nav>
+</h3>
+
+
+<h1 class="text-center pt-3 pb-3" style="color: #86022c; font-family:sans-serif;">PRODUCT COMPARISON</h1>
+
+
+<div class="container" style="border: 1px solid black; margin-bottom: 20px; height:2000px">
+
+<div  class="flex-container">
+
+    <div>
+        <select name="" id="leftselect" onchange="myfun()" >
+            <option value="b">Nike Utility Elite
+                Backpack (32L)</option>
+            <option value="m">LeBron Elemental
+                Fanny Pack (10L)</option>
+            <option value="o">Nike Storm-FIT ADV Utility Power
+                Duffel Bag (Small, 31L)</option>
+            <option value="b">Nike Storm-FIT ADV Utility Power
+                Fanny Pack (5L)</option>
+            <option value="m">Nike Elite Pro
+                Basketball Backpack (32L)</option>
+            <option value="o">Jordan
+                Paris Saint-Germain Festival Bag</option>
+            <option value="b">Nike Heritage
+                Camo Crossbody Bag (4L)</option>
+            <option value="m">Nike Sportswear Essentials
+                Crossbody Bag (1L)</option>
+
+                
+        </select>
+    </div>
+
+    <div>
+        <select name="" id="rightselect" onchange="myfun_2()">
+            <option value="b">Nike Utility Elite
+                Backpack (32L)</option>
+            <option value="m">LeBron Elemental
+                Fanny Pack (10L)</option>
+            <option value="o">Nike Storm-FIT ADV Utility Power
+                Duffel Bag (Small, 31L)</option>
+            <option value="b">Nike Storm-FIT ADV Utility Power
+                Fanny Pack (5L)</option>
+            <option value="m">Nike Elite Pro
+                Basketball Backpack (32L)</option>
+            <option value="o">Jordan
+                Paris Saint-Germain Festival Bag</option>
+            <option value="b">Nike Heritage
+                Camo Crossbody Bag (4L)</option>
+            <option value="m">Nike Sportswear Essentials
+                Crossbody Bag (1L)</option>
+              
+        </select>
+    </div>
+</div>
+
+<hr>
+<div  class="flex-container">
+
+
+    <div id="left">
+        <div class="leftfruit shadow">
+            <img src="nike1.jpg" alt="" height="300px" width="300px" style="margin-left:50px ;">
+            <h3>Nike Utility Elite
+                Backpack (32L)</h3>
+            <p>This is pro level storage. The Nike Utility Elite Backpack keeps your gear close, secure and organized while commuting to and from training sessions. Multiple zippered pockets on the front keep items like headphones, keys and snacks within reach, while the zippered main compartment opens wide and flat for easy access to everything else. Adjustable shoulder straps with Air units provide cushioned comfort, while tough handles on the side and top provide more carrying options.
+
+
+                Benefits<br>
+                
+                Zippered sleeve securely stores a laptop up to 15".
+                Side sleeve holds a 32-ounce water bottle.
+                Durable loops let you attach accessories.
+                Eyelet vents let your gear breathe.
+                Mesh helps keep your back cool.<br>
+                
+                Product Details<br>
+                
+                19" H x 13" <br> W x 6" D
+                Body: 91%  <br>polyester/9% nylon.  <br>Lining 100% polyester.
+                Zippered, plush-lined pocket on upper back
+                Spot clean <br>
+                Imported<br>
+                Shown: Black/Black/Total Orange<br>
+                Style: DQ5226-010</p>
+        </div>
+        <div class="leftfruit shadow">
+            <img src="nike2.jpg" alt="" height="300px" width="300px" style="margin-left:50px ;">
+            <h3>LeBron Elemental
+                Fanny Pack (10L)</h3>
+            <p>Whether it's practicing your jumper on your favorite court or hanging out with friends, take the fanny pack that's as essential to your day as LeBron is to the league. The large main compartment features a dual-zipper design so you can reach your gear easily, while the smaller front compartment helps keep small things like your cards and cash organized.
+
+
+                Benefits<br>
+                
+                Adjustable strap lets you easily personalize your fit.
+                Carabiner lets you hook your keys outside the bag.
+                Mesh back provides ventilation.
+                <br>
+                Product Details
+                <br>
+                21"L x 8"W x 6"H<br>
+                100% polyester<br>
+                Spot clean<br>
+                Imported<br>
+                Shown: Black/Black/White<br>
+                Style: DQ5344-010</p><br>
+        </div>
+        <div class="leftfruit shadow">
+            <img src="nike3.jpg" alt="" height="300px" width="300px" style="margin-left:50px ;">
+            <h3>Nike Storm-FIT ADV Utility Power
+                Duffel Bag (Small, 31L)
+                $75</h3>
+            <p>Your power knows no bounds, and neither does this duffel bag. With a spacious zippered main compartment to store your workout gear, this bag also has plenty of smaller storage options on the front and sides. The bonded zippers help keep the water out, and the weather-resistant technology keeps you going in the harsh weather, so you don't have to slow down through rain, snow or wind.
+
+
+                Benefits
+                <br>
+                Nike Storm-FIT ADV technology combines windproof and waterproof fabric with advanced engineering and features to help keep you comfortable in harsh weather conditions.
+                Bonded zipper openings provide water resistance.
+                Multiple small pockets provide essential tech storage.
+                Adjustable shoulder strap and dual handles give you comfortable carrying options.
+                Adjustable strap is removable to provide carrying options.
+                <br>
+                Product Details
+                <br>
+                100% polyester<br>
+                19"L x 9 <br>"W x 9"H<br>
+                Reflective elements<br>
+                This product is not intended for use as Personal Protective Equipment (PPE)<br>
+                Spot clean<br>
+                Imported<br>
+                Shown: Black/Total Orange<br>
+                Style: DQ5335-010</p>
+        </div>
+        <div class="leftfruit shadow">
+            <img src="nike4.jpg" alt="" height="300px" width="300px" style="margin-left:50px ;">
+            <h3>Nike Storm-FIT ADV Utility Power
+                Fanny Pack (5L)</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, quia!</p>
+        </div>
+        <div class="leftfruit shadow">
+            <img src="nike1.jpg" alt="" height="300px" width="300px" style="margin-left:50px ;">
+            <h3>Nike Utility Elite
+                Backpack (32L)</h3>
+            <p>For basketball players, Elite means the best—exactly what you get with the Nike Elite Pro Backpack. It features a duffel-like opening that lets you access the contents when you lay it flat. Dedicated compartments for essentials items and more help keep your gear organized to and from practice or games.
+
+                <br>
+                Easy Access
+                <br>
+                The pack's duffel-like entry gives you easy access to your gear. Carry it like a pack then lay it flat to stash or grab what you need.
+                
+                
+                Dedicated Storage
+                
+                In addition to the main compartment, there's a laptop sleeve, an area for cords, a ventilated pocket for wet items and space for an oversized water bottle. Extra pockets provide room for smaller items.
+                
+                
+                Durable Design
+                
+                The durable bottom panel resists abrasion and features details inspired by outdoor basketball courts.
+                
+                <br>
+                Product Details
+                <br>
+                19"H x 11 <br>"W x 9"D<br>
+                32 L<br>
+                100% polyester<br>
+                Spot clean<br>
+                Imported<br>
+                Shown: Black<br>
+                Style: BA6164-014</p><br>
+        </div>
+        <div class="leftfruit shadow">
+            <img src="nike5.jpg" alt="" height="300px" width="300px" style="margin-left:50px ;">
+            <h3>Nike Elite Pro
+                Basketball Backpack (32L))</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, quia!</p>
+        </div>
+        <div class="leftfruit shadow">
+            <img src="nike6.jpg" alt="" height="300px" width="300px" style="margin-left:50px ;">
+            <h3>Jordan
+                Paris Saint-Germain Festival Bag</h3>
+            <p>FOR DAYS ON THE GO.<br>
+
+
+                When you don't need a lot, the Jordan Paris Saint-Germain Festival Bag comes through with a simple design for just the necessities.
+                
+                <br>
+                Benefits
+                <br>
+                Main compartment has space for phone, keys or other small items.
+                Zippered front pocket for when you need to stash something small quickly.
+                Adjustable strap for comfortable wear.
+                <br>
+                Product Details<br>
+                
+                5"L x 1.625"W x 7"<br>
+                100% Polyester<br>
+                Spot Clean<br>
+                Imported<br>
+                Shown: Black<br>
+                Style: 9A0662-023</p>
+        </div>
+        <div class="leftfruit shadow">
+            <img src="nike7.jpg" alt="" height="300px" width="300px" style="margin-left:50px ;">
+            <h3>Nike Heritage
+                Camo Crossbody Bag (4L)</h3>
+            <p>No blending in with this bag—camo's got you covered with a large zippered compartment to store your need-to-go gear. Grabbing your keys in a rush? There's a front pocket for easy access. When you're ready to hit the road, an adjustable strap allows for a custom length.
+                <br>
+
+                Product Details
+                <br>
+                100% polyester<br>
+                9"H X 7 <br>"W X 3"D<br>
+                Spot clean<br>
+                Imported<br>
+                Shown: Sail/Sail/Black<br>
+                Style: DQ5934-133</p>
+        </div>
+        <div class="leftfruit shadow">
+            <img src="nike8.jpg" alt="" height="300px" width="300px" style="margin-left:50px ;">
+            <h3>Nike Heritage
+                Camo Crossbody Bag (4L)</h3>
+            <p>No blending in with this bag—camo's got you covered with a large zippered compartment to store your need-to-go gear. Grabbing your keys in a rush? There's a front pocket for easy access. When you're ready to hit the road, an adjustable strap allows for a custom length.
+                <br>
+
+                Product Details
+                <br>
+                100% polyester<br>
+                9"H X 7"W X 3"D<br>
+                Spot clean<br>
+                Imported<br>
+                Shown: Sail/Sail/Black<br>
+                Style: DQ5934-133</p>
+        </div>
+
+      
+
+    </div>
+
+    <div id="right ">
+        <div class="rightfruit shadow">
+            <img src="nike1.jpg" alt="" height="300px" width="300px" style="margin-left:50px ;">
+            <h3>Nike Utility Elite<br>
+                Backpack (32L)</h3>
+            <p>This is pro level storage. The Nike Utility Elite Backpack keeps your gear close, secure and organized while commuting to and from training sessions. Multiple zippered pockets on the front keep items like headphones, keys and snacks within reach, while the zippered main compartment opens wide and flat for easy access to everything else. Adjustable shoulder straps with Air units provide cushioned comfort, while tough handles on the side and top provide more carrying options.
+                <br>
+
+                Benefits<br>
+                
+                Zippered sleeve securely stores a laptop up to 15".
+                Side sleeve holds a 32-ounce water bottle.
+                Durable loops let you attach accessories.
+                Eyelet vents let your gear breathe.
+                Mesh helps keep your back cool.
+                <br>
+                Product Details<br>
+                
+                19" H x 13 <br>" W x 6" D<br>
+                Body: 91% polyester/9% nylon. <br> Lining: 100% polyester.<br>
+                Zippered, plush-lined pocket on upper back<br>
+                Spot clean<br>
+                Imported<br>
+                Shown: Black/Black/Total Orange<br><br>
+                Style: DQ5226-010</p>
+        
+        </div>
+        <div class="rightfruit shadow">
+            <img src="nike2.jpg" alt="" height="300px" width="300px" style="margin-left:50px ;">
+            <h3>LeBron Elemental
+                Fanny Pack (10L)</h3>
+            <p>Whether it's practicing your jumper on your favorite court or hanging out with friends, take the fanny pack that's as essential to your day as LeBron is to the league. The large main compartment features a dual-zipper design so you can reach your gear easily, while the smaller front compartment helps keep small things like your cards and cash organized.
+                <br>
+
+                Benefits
+                <br>
+                Adjustable strap lets you easily personalize your fit.
+                Carabiner lets you hook your keys outside the bag.
+                Mesh back provides ventilation.
+                <br>
+                Product Details
+                <br>
+                21"L x 8 <br>"W x 6"H<br>
+                100% polyester<br>
+                Spot clean<br>
+                Imported<br>
+                Shown: Black/Black/White<br>
+                Style: DQ5344-010</p></div>
+
+        <div class="rightfruit shadow">
+            <img src="nike3.jpg" alt="" height="300px" width="300px" style="margin-left:50px ;">
+            <h3>Nike Storm-FIT ADV Utility Power
+                Duffel Bag (Small, 31L)
+                $75</h3>
+            <p>Your power knows no bounds, and neither does this duffel bag. With a spacious zippered main compartment to store your workout gear, this bag also has plenty of smaller storage options on the front and sides. The bonded zippers help keep the water out, and the weather-resistant technology keeps you going in the harsh weather, so you don't have to slow down through rain, snow or wind.
+
+                <br>
+                Benefits
+                <br>
+                Nike Storm-FIT ADV technology combines windproof and waterproof fabric with advanced engineering and features to help keep you comfortable in harsh weather conditions.
+                Bonded zipper openings provide water resistance.
+                Multiple small pockets provide essential tech storage.
+                Adjustable shoulder strap and dual handles give you comfortable carrying options.
+                Adjustable strap is removable to provide carrying options.
+                <br>
+                Product Details
+                <br>
+                100% polyester<br>
+                19"L x 9" <br>W x 9"H<br>
+                Reflective elements<br>
+                This product is intended for use as Personal Protective Equipment (PPE)<br>
+                Spot clean<br>
+                Imported<br>
+                Shown: Black/Total Orange<br>
+                Style: DQ5335-010</p>
+        </div>
+
+        <div class="rightfruit shadow">
+            <img src="nike4.jpg" alt="" height="300px" width="300px" style="margin-left:50px ;">
+            <h3>Nike Storm-FIT ADV Utility Power
+                Fanny Pack (5L)</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, quia!</p>
+        </div>
+
+        <div class="rightfruit shadow">
+            <img src="nike1.jpg" alt="" height="300px" width="300px" style="margin-left:50px ;">
+            <h3>Nike Utility Elite
+                Backpack (32L)</h3>
+            <p>For basketball players, Elite means the best—exactly what you get with the Nike Elite Pro Backpack. It features a duffel-like opening that lets you access the contents when you lay it flat. Dedicated compartments for essentials items and more help keep your gear organized to and from practice or games.
+                <br>
+
+                Easy Access
+                <br>
+                The pack's duffel-like entry gives you easy access to your gear. Carry it like a pack then lay it flat to stash or grab what you need.
+                
+                <br>
+                Dedicated Storage
+                <br>
+                In addition to the main compartment, there's a laptop sleeve, an area for cords, a ventilated pocket for wet items and space for an oversized water bottle. Extra pockets provide room for smaller items.
+                <br>
+                
+                Durable Design
+                <br>
+                The durable bottom panel resists abrasion and features details inspired by outdoor basketball courts.
+                
+                <br>
+                Product Details
+                <br>
+                19"H x 11 <br>"W x 9"D<br>
+                32 L<br>
+                100% polyester<br>
+                Spot clean<br>
+                Imported<br>
+                Shown: Black<br>
+                Style: BA6164-014</p>
+        </div>
+        <div class="rightfruit shadow">
+            <img src="nike5.jpg" alt="" height="300px" width="300px" style="margin-left:50px ;">
+            <h3>Nike Elite Pro
+                Basketball Backpack (32L))</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, quia!</p></div>
+        <div class="rightfruit shadow">
+            <img src="nike4.jpg" alt="" height="300px" width="300px" style="margin-left:50px ;">
+            <h3>Nike Storm-FIT ADV Utility Power
+                Fanny Pack (5L)</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, quia!</p>
+        </div>
+        <div class="rightfruit shadow">
+            <img src="nike6.jpg" alt="" height="300px" width="300px" style="margin-left:50px ;">
+            <h3>Jordan
+                Paris Saint-Germain Festival Bag</h3>
+            <p>FOR DAYS ON THE GO.
+
+
+                When you don't need a lot, the Jordan Paris Saint-Germain Festival Bag comes through with a simple design for just the necessities.
+                
+                
+                Benefits
+                
+                Main compartment has space for phone, keys or other small items.
+                Zippered front pocket for when you need to stash something small quickly.
+                Adjustable strap for comfortable wear.
+                
+                Product Details<br>
+                
+                5"L x 1.625 <br>"W x 7"<br>
+                100% Polyester<br>
+                Spot Clean<br>
+                Imported<br>
+                Shown: Black<br>
+                Style: 9A0662-023</p></div>
+                <div class="rightfruit shadow">
+                    <img src="nike7.jpg" alt="" height="300px" width="300px" style="margin-left:50px ;">
+                    <h3>Nike Heritage
+                        Camo Crossbody Bag (4L)</h3>
+                    <p>No blending in with this bag—camo's got you covered with a large zippered compartment to store your need-to-go gear. Grabbing your keys in a rush? There's a front pocket for easy access. When you're ready to hit the road, an adjustable strap allows for a custom length.
+                        <br>
+        
+                        Product Details<br>
+                        
+                        100% polyester<br>
+                        9"H X 7"W X 3"D<br>
+                        Spot clean<br>
+                        Imported<br>
+                        Shown: Sail/Sail/Black<br>
+                        Style: DQ5934-133</p></div>
+                        <div class="rightfruit shadow">
+                            <img src="nike8.jpg" alt="" height="300px" width="300px" style="margin-left:50px ;">
+                            <h3>Nike Heritage
+                                Camo Crossbody Bag (4L)</h3>
+                            <p>No blending in with this bag—camo's got you covered with a large zippered compartment to store your need-to-go gear. Grabbing your keys in a rush? There's a front pocket for easy access. When you're ready to hit the road, an adjustable strap allows for a custom length.
+                                <br>
+                
+                                Product Details<br>
+                                
+                                100% polyester<br>
+                                9"H X 7 <br>"W X 3"D<br>
+                                Spot clean<br>
+                                Imported<br>
+                                Shown: Sail/Sail/Black<br>
+                                Style: DQ5934-133</p></div>
+
+
+                                
+
+
+
+                 
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+<script>
+    function myfun(){
+        const left = document.getElementById("leftselect");
+     
+
+        if(left.value=="m")
+        {
+            document.getElementsByClassName("leftfruit")[1].style.display = "block";
+            document.getElementsByClassName("leftfruit")[0].style.display = "none";
+            document.getElementsByClassName("leftfruit")[2].style.display = "none";
+        }
+        if(left.value=="b")
+        {
+            document.getElementsByClassName("leftfruit")[1].style.display = "none";
+            document.getElementsByClassName("leftfruit")[0].style.display = "block";
+            document.getElementsByClassName("leftfruit")[2].style.display = "none";
+        }
+        if(left.value=="o")
+        {
+            document.getElementsByClassName("leftfruit")[1].style.display = "none";
+            document.getElementsByClassName("leftfruit")[0].style.display = "none";
+            document.getElementsByClassName("leftfruit")[2].style.display = "block";
+        }
+
+
+    }
+
+
+
+    function myfun_2(){
+        const right = document.getElementById("rightselect");
+     
+
+        if(right.value=="m")
+        {
+            document.getElementsByClassName("rightfruit")[1].style.display = "block";
+            document.getElementsByClassName("rightfruit")[0].style.display = "none";
+            document.getElementsByClassName("rightfruit")[2].style.display = "none";
+        }
+        if(right.value=="b")
+        {
+            document.getElementsByClassName("rightfruit")[1].style.display = "none";
+            document.getElementsByClassName("rightfruit")[0].style.display = "block";
+            document.getElementsByClassName("rightfruit")[2].style.display = "none";
+        }
+        if(right.value=="o")
+        {
+            document.getElementsByClassName("rightfruit")[1].style.display = "none";
+            document.getElementsByClassName("rightfruit")[0].style.display = "none";
+            document.getElementsByClassName("rightfruit")[2].style.display = "block";
+        }
+
+
+    }
+</script>
+   
+
+<hr>
+ 
+
+
+
+ 
+   
+    
+
+</body>
+
+</html>

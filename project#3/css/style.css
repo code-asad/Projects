@@ -1,0 +1,79 @@
+/* #navbar {
+  background-color: rgb(255, 145, 0);
+} */
+/* #count {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border: 2px solid red;
+  background-color: blue;
+  top: 0%;
+  color: black;
+}
+#counter {
+  display: flex;
+  justify-content: right;
+}
+#item {
+  font-size: large;
+}
+#navbarDropdown {
+  font-size: large;
+  background-color: rgb(255, 145, 0);
+}
+#drop-item {
+  background-color: rgba(255, 166, 0, 0.806);
+}
+#drop-item li a {
+  color: black;
+}
+
+#drop-item a:hover {
+  color: white;
+
+  background-color: black;
+}
+
+#logo {
+  text-align: center;
+  border-bottom: 10px solid black;
+}
+/* #navv {
+  background-color: rgb(255, 145, 0);
+  display: flex !important;
+  justify-content: center !important;
+  border-bottom: 10px solid black;
+}
+.pic {
+  background-color: rgb(0, 0, 0); */
+
+/* .carousel-item img {
+  height: 650px;
+}
+.nav ul li a:hover {
+  color: white;
+}
+.nav ul li a {
+  color: rgb(1, 1, 1);
+}
+
+.bu {
+  color: black;
+}
+
+i{
+  color:orange;
+}
+.toggler:focus{
+  outline: none;
+}
+.card{
+  border-radius: 20px;
+}
+.card img {
+  border-radius: 20px;
+}*/
+
+.container .navbar-brand img{
+  width: 100px;
+  height: 5rem; }

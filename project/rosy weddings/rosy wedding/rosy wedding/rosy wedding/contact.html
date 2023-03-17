@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <!-- bootstrap cdn  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <!-- javascript cdn  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+        <!-- font awoesom cdn  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="custom.css">
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+          <script src="https://maps.googleapis.com/maps/api/js"></script>
+        
+</head>
+<body>
+<!-- navbar -->
+<header>
+    <nav class="navbar navbar-expand-lg navigation-wrap  ">
+        <div class="container">
+          <a class="navbar-brand" href="#"><img src="images/logo.png" alt="" width="200px" height="50px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-stream navbar-toggler"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item px-2">
+                <a class="nav-link " aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item px-2">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item px-2">
+                <a class="nav-link " href="contact.html" tabindex="-1" aria-disabled="true">Contact</a>
+              </li>
+              <li class="nav-item px-2">
+                <a class="nav-link " href="gallery.html" tabindex="-1" aria-disabled="true">Gallery</a>
+              </li>
+            </ul>
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="main-btn px-3">Login</button>
+          </div>
+        </div>
+      </nav>
+  <!-- navbar -->
+
+  <div id="id01" class="modal">
+    <div id="LoginAndRegistrationForm">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <h1 id="formTitle">Login</h1>
+      <div id="formSwitchBtn">
+        <button onclick="ShowLoginForm()"  id="ShowLoginBtn" class="active main-btn">Login</button>
+        <button onclick="ShowRegistrationForm()"   id="ShowRegistrationBtn" class="main-btn">Registration</button>
+      </div>
+      <div id="LoginFrom">
+        <form action="#">
+          <div class="center">
+            <input id="LoginEmail" class="input-text" type="text" placeholder="Email Address"> 
+            <input id="LoginPassword" class="mt-10 input-text" type="password" placeholder="Password">
+          </div>
+          
+          <div class="forgot-pass-remember-me mt-10">
+            <div class="forgot-pass">
+              <a id="ForgotPassword" href="JavaScript:void(0);" onclick="ShowForgotPasswordForm()" >Forgot Password?</a>
+            </div>
+            <div class="remember-me">
+              <input id="rememberMe" type="checkbox">
+              <label for="rememberMe">Remember Me</label>
+            </div>
+          </div>
+  
+          <div class="center mt-20">
+            <input onclick="return ValidateLoginForm();"  class="main-btn" type="submit" value="Login" id="LoginBtn">
+          </div>
+        </form>
+        <p class="center mt-20 dont-have-account">
+          Don't have an account? 
+          <a href="JavaScript:void(0);" onclick="ShowRegistrationForm()">Registration now</a>
+        </p>
+      </div>
+      <div id="RegistrationFrom">
+        <form action="#">
+          <div class="center">
+            <input id="RegiName" class="input-text" type="text" placeholder="Full Name">
+            <input id="RegiEmailAddres" class="input-text mt-10" type="email" placeholder="Email Address">
+            <input id="RegiPassword" class="mt-10 input-text" type="password" placeholder="Password">
+            <input id="RegiConfirmPassword" class="mt-10 input-text" type="password" placeholder="Confirm Password">
+          </div>
+          <div class="center mt-20">
+            <input   class="main-btn" type="submit" value="Registration" id="RegistrationitBtn">
+          </div>
+        </form>
+        <p class="center mt-20 already-have-account">
+          Already have an account? 
+          <a href="#" onclick="ShowLoginForm()">Login now</a>
+        </p>
+      </div>
+      <div id="ForgotPasswordForm">
+        <form action="">
+          <div class="center mt-20">
+            <input class="input-text " type="email" id="forgotPassEmail" placeholder="Email Address">
+          </div>
+          <div class="center mt-20">
+            <input onclick="return ValidateForgotPasswordForm();" class="main-btn" type="submit" value="Reset Password" id="PasswordResetBtn" >
+          </div>
+        </form>
+        <p class="center mt-20 already-have-account">
+          Back to the 
+          <a href="JavaScript:void(0);" onclick="ShowLoginForm()">Login page</a> | <a href="JavaScript:void(0);" onclick="ShowRegistrationForm()">Registration page</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+ <!-- top bannar  -->
+
+  <div class="container-fluid px-0 top-banner-contact mb-5">
+    <div class="container">
+      <div class="row">
+        <div class="text-center">
+          <h1 class="">Contact Us</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- contact cards  --> 
+<section id="contact-cards mt-5">
+<div class="container ">
+<div class="row  ">
+  <div class="col-lg-4 col-md-4 mb-5">
+    <div class="card  ">
+      <div class="icon  text-center mt-5">
+        <i class="fa fa-map-o" aria-hidden="true"></i>
+      </div>
+      <div class="card-body text-center">
+        <h2 class="card-title ">Find Location</h2>
+        <a href="https://aptech-education.com.pk/locateus.html?cid=2049"><span class="">Aptech Learning - SFC</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-4 mb-5 ">
+    <div class="card ">
+      <div class="icon text-center mt-5 ">
+        <i class="fa fa-phone" aria-hidden="true"></i>
+      </div>
+      <div class="card-body text-center ">
+        <h2 class="card-title  "> Call Us Now </h2>
+        <a href="mailto:03164352851"><span class="">Tel: 03164352851</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4  col-md-4  ">
+    <div class="card  ">
+      <div class="icon  text-center mt-5">
+        <i class="fa fa-envelope"></i>
+      </div>
+      <div class="card-body text-center ">
+        <h2 class="card-title  "> Email Us </h2>
+        <!-- <a href="mailto:https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">asadmuhammad09123@gmail.com</a> -->
+        <a href="mailto:https://mail.google.com/mail/">rosyweddings@gmail.com.org</a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- contact form and map  -->
+
+<section id="Form">
+<div class="container  my-5 ">
+  <div class="row ">
+    <div class="col-12">
+      <h2 class="text-center fs-1">Get in Touch</h2>
+      
+      <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis odit .</p>
+      <div class="icon text-center">
+        <img src="images/3240908-removebg-preview.png" class="img-fluid" alt="">
+      </div>
+    </div>
+  </div>
+<div class="row  myform ">
+    <div class="col-md-6 mt-5 mb-5">
+      <div class="form-group ">
+        <input id="RegiName" type="text" class="form-control mb-3 mb-md-4 mb-lg-3 w-75" aria-describedby="userName" placeholder="Name"  required="">
+        <input type="email" id="RegiEmailAddres" class="form-control mb-3 mb-md-4 mb-lg-3 w-75" aria-describedby="userEmail" placeholder="Email" required="">
+        <input type="tel" class="form-control mb-3 mb-md-4 mb-lg-3 w-75" aria-describedby="userMobile" placeholder="Mobile" required="">
+        <input type="text" class="form-control mb-3 mb-md-4 mb-lg-3 w-75" aria-describedby="userMobile" placeholder="Subject" required="">
+        <textarea class="form-control w-75" id="exampleTextarea" rows="6" placeholder="Type your message here..."></textarea>
+        <button type="submit" onclick="return ValidateRegistrationForm();" class="main-btn mt-4 ">send</button>
+        </div>
+      </div>
+      <div class="col-md-6 mt-5 mb-5">
+        <div id="map-area">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d115824.16752679084!2d67.0695424!3d24.8807424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1676864823444!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+  </div>
+
+ 
+</div>
+</section>
+
+
+<div class="icon text-center mb-5">
+  <span><img src="images/001size_cleanup-removebg-preview.png" class="img-fluid  " alt=""></span>
+</div>
+
+  
+<footer >
+  <div class="footer py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <a href="#" class="footer-link">Register</a>
+          <a href="#" class="footer-link">Forum</a>
+          <a href="#" class="footer-link">Affiliate</a>
+          <a href="#" class="footer-link">FAQ</a>
+        </div>
+        <div class="footer-social pt-5 px-3 text-center">
+                    <i class="fab fa-facebook px-2"></i>
+                    <i class="fab fa-instagram px-2"></i>
+                    <i class="fab fa-linkedin px-2"></i>
+                    <i class="fab fa-twitter px-2"></i>
+                    <i class="fab fa-pinterest px-2"></i>
+                </div>
+      <div class="col-sm-12">
+        <div class="footer-copy">
+<div class="copy-right text-center pt-5">
+  <p class="text-light">© 2023. BlissfulBeginnings. Allrights reserved</p>
+</div>
+      </div>
+    </div>
+    </div>
+  </div>
+</footer>
+
+<!-- jquery cdn  -->
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+<script src="custom.js"></script>
+<script>
+function send() {
+  alert("massege are sended........... ")
+}
+</script>
+</body>
+</html>
